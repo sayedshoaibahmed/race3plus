@@ -348,7 +348,7 @@ export default function ProductsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { label: "Formula", value: "Low MEG Concentrate" },
-              { label: "Dilution Ratio", value: "1:4 (concentrate : water)" },
+              { label: "Dilution Ratio", value: "1:4 (concentrate : deionised water)" },
               { label: "Primary Function", value: "Engine Cooling &amp; Protection" },
               { label: "Anti-corrosion", value: "Advanced Additive Package" },
               { label: "Compatible Vehicles", value: "Cars, Bikes, SUVs, Commercial" },

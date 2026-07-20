@@ -295,8 +295,8 @@ export default function HomePage() {
             <div className="hidden lg:flex flex-col gap-6" aria-hidden="true">
               {/* Stat blocks */}
               {[
-                { num: "9 Mo", label: "Replacement cycle" },
-                { num: "4×", label: "Vehicle types covered" },
+                { num: "9 Month", label: "Replacement cycle" },
+                { num: "4x4", label: "Vehicle types covered" },
                 { num: "100%", label: "Performance focused" },
               ].map((stat) => (
                 <div

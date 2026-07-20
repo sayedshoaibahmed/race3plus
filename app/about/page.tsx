@@ -184,8 +184,8 @@ export default function AboutPage() {
                 </span>
 
                 {[
-                  { num: "9 Mo", label: "Replacement cycle" },
-                  { num: "4×", label: "Vehicle types covered" },
+                  { num: "9 Month", label: "Replacement cycle" },
+                  { num: "4x4", label: "Vehicle types covered" },
                   { num: "100%", label: "Performance focused" },
                 ].map((s) => (
                   <div key={s.label} className="relative z-10 flex items-baseline gap-4 border-b last:border-0 pb-5 last:pb-0" style={{ borderColor: "#1F1F1F" }}>
