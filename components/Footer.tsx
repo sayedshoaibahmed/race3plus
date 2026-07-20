@@ -36,10 +36,11 @@ export default function Footer() {
           {/* Brand column */}
           <div className="flex flex-col gap-4">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Race3+ logo"
               width={140}
               height={48}
+              loading="lazy"
               className="h-[32px] md:h-[44px] w-auto"
               style={{ objectFit: "contain", objectPosition: "left" }}
             />

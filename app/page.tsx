@@ -134,6 +134,26 @@ const benefits = [
       </svg>
     ),
   },
+  {
+    id: "high-cooling-efficiency",
+    label: "High Cooling Efficiency",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <line x1="12" y1="2" x2="12" y2="22" />
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <line x1="4.93" y1="19.07" x2="19.07" y2="4.93" />
+        <line x1="12" y1="2" x2="9" y2="5" />
+        <line x1="12" y1="2" x2="15" y2="5" />
+        <line x1="12" y1="22" x2="9" y2="19" />
+        <line x1="12" y1="22" x2="15" y2="19" />
+        <line x1="2" y1="12" x2="5" y2="9" />
+        <line x1="2" y1="12" x2="5" y2="15" />
+        <line x1="22" y1="12" x2="19" y2="9" />
+        <line x1="22" y1="12" x2="19" y2="15" />
+      </svg>
+    ),
+  },
 ];
 
 /* ─────────────────────────────────────────────
@@ -187,7 +207,7 @@ export default function HomePage() {
           {/* Logo / Wordmark */}
           <div className="animate-fade-up delay-100">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Race3+ — Keep Performance Alive"
               width={480}
               height={164}
@@ -358,10 +378,11 @@ export default function HomePage() {
               {/* Logo watermark */}
               <div className="flex justify-center py-4">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Race3+"
                   width={220}
                   height={75}
+                  loading="lazy"
                   className="h-[32px] md:h-[40px] w-auto"
                   style={{ objectFit: "contain", opacity: 0.55 }}
                 />

@@ -54,7 +54,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="flex items-center shrink-0" aria-label="Race3+ Home">
         <Image
-          src="/logo.png"
+          src="/logo.webp"
           alt="Race3+ — Keep Performance Alive"
           width={140}
           height={48}

@@ -190,7 +190,7 @@ export default function ProductsPage() {
                 aria-label="Product reveal image"
               >
                 <Image
-                  src="/ribbon.png"
+                  src="/ribbon.webp"
                   alt="Race3+ Performance Engine Coolant — product reveal box with red ribbon"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
