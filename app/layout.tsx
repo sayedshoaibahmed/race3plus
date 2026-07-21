@@ -25,10 +25,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    default: `Race 3 Plus | Premium Engine Coolant & Automotive Protection`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: "Race 3 Plus offers premium engine coolant and automotive protection products — including high-performance coolant concentrates, additives, and anti-corrosion solutions engineered for cars, bikes, SUVs, and commercial vehicles across India.",
   keywords: [
     "Race3+",
     "engine coolant India",

@@ -205,6 +205,7 @@ export default function HomePage() {
           </div>
 
           {/* Logo / Wordmark */}
+          <h1 className="sr-only">Race 3 Plus</h1>
           <div className="animate-fade-up delay-100">
             <Image
               src="/logo.webp"
