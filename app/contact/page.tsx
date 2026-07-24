@@ -6,19 +6,49 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Race3+ — call, WhatsApp, or email us. We're based in Kodagu, Karnataka. Enquiries about our Performance Engine Coolant Concentrate welcome.",
+    "Get in touch with Race 3 Plus — call, WhatsApp, or email us. We're based in Kodagu, Karnataka, India. Enquiries about our Race 3 Plus Performance Engine Coolant Concentrate welcome.",
+  alternates: {
+    canonical: "https://race3plus.com/contact",
+  },
   openGraph: {
-    title: "Contact Race3+ — We'd Love to Hear from You",
+    title: "Contact Race 3 Plus — We'd Love to Hear from You",
     description:
-      "Reach the Race3+ team by phone, WhatsApp, or email. Questions about products, trade enquiries, and launch updates welcome.",
+      "Reach the Race 3 Plus team by phone, WhatsApp, or email. Questions about products, trade enquiries, and launch updates welcome.",
     url: `${siteConfig.url}/contact`,
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Contact Race 3 Plus" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Race3+",
+    title: "Contact Race 3 Plus",
     description: "Phone, WhatsApp, email — reach us any way you prefer.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
+  },
+};
+
+/* ── LocalBusiness JSON-LD ── */
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Race 3 Plus",
+  alternateName: "Race3+",
+  url: siteConfig.url,
+  email: siteConfig.email,
+  telephone: siteConfig.phone,
+  image: `${siteConfig.url}/og-image.png`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Madikeri",
+    addressRegion: "Karnataka",
+    postalCode: "571201",
+    addressCountry: "IN",
+  },
+  areaServed: "IN",
+  sameAs: [siteConfig.instagram],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.phone,
+    contactType: "customer service",
+    availableLanguage: "English",
   },
 };
 
@@ -148,6 +178,11 @@ const channels = [
 export default function ContactPage() {
   return (
     <>
+      {/* JSON-LD — LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       {/* ── Page Header ─────────────────────────── */}
       <section
         className="page-header-band section-angled"

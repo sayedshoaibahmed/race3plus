@@ -7,20 +7,23 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Blog — Engine Care & Performance Tips",
   description:
-    "The Race3+ blog: practical guides on engine coolant, cooling system maintenance, and what makes high-performance automotive fluids different. Written for car, bike, and SUV owners.",
+    "The Race 3 Plus blog: practical guides on engine coolant, cooling system maintenance, and what makes high-performance automotive fluids different. Written for car, bike, and SUV owners.",
+  alternates: {
+    canonical: "https://race3plus.com/blog",
+  },
   openGraph: {
-    title: "Race3+ Blog — Engine Care & Performance Tips",
+    title: "Race 3 Plus Blog — Engine Care & Performance Tips",
     description:
-      "Learn how engine coolant works, how to spot cooling system problems early, and what the 1:4 concentrate formula in Race3+ actually does for your engine.",
+      "Learn how engine coolant works, how to spot cooling system problems early, and what the 1:4 concentrate formula in Race 3 Plus actually does for your engine.",
     url: `${siteConfig.url}/blog`,
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Race 3 Plus Blog" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Race3+ Blog — Engine Care & Performance Tips",
+    title: "Race 3 Plus Blog — Engine Care & Performance Tips",
     description:
       "Coolant education, maintenance tips, and product deep-dives — written for drivers who care about their engines.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
 };
 

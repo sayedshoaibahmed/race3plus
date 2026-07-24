@@ -6,20 +6,23 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Race3+ — built from a passion for automotive excellence, committed to reliable engine protection solutions and performance products you can trust every time you turn the key.",
+    "Learn about Race 3 Plus — built from a passion for automotive excellence, committed to reliable engine protection solutions and performance products you can trust every time you turn the key.",
+  alternates: {
+    canonical: "https://race3plus.com/about",
+  },
   openGraph: {
-    title: "About Race3+ — Built on a Passion for Automotive Excellence",
+    title: "About Race 3 Plus — Built on a Passion for Automotive Excellence",
     description:
-      "Race3+ is committed to creating reliable automotive solutions that protect your engine and help it perform at its best. Discover our story, mission, and what makes us different.",
+      "Race 3 Plus is committed to creating reliable automotive solutions that protect your engine and help it perform at its best. Discover our story, mission, and what makes us different.",
     url: `${siteConfig.url}/about`,
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Race 3 Plus" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Race3+ — Built on a Passion for Automotive Excellence",
+    title: "About Race 3 Plus — Built on a Passion for Automotive Excellence",
     description:
       "Committed to engine protection and dependable automotive performance. Every driver deserves products they can trust.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
 };
 

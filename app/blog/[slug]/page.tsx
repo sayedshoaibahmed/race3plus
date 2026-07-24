@@ -22,20 +22,23 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://race3plus.com/blog/${post.slug}`,
+    },
     openGraph: {
-      title: `${post.title} | Race3+ Blog`,
+      title: `${post.title} | Race 3 Plus Blog`,
       description: post.excerpt,
       url: `${siteConfig.url}/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
-      authors: ["Race3+"],
-      images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+" }],
+      authors: ["Race 3 Plus"],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${post.title} | Race 3 Plus Blog` }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["/logo.png"],
+      images: ["/og-image.png"],
     },
   };
 }
@@ -104,19 +107,21 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    image: `${siteConfig.url}/og-image.png`,
     datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
     author: {
       "@type": "Organization",
-      name: "Race3+",
+      name: "Race 3 Plus",
       url: siteConfig.url,
     },
     publisher: {
       "@type": "Organization",
-      name: "Race3+",
+      name: "Race 3 Plus",
       url: siteConfig.url,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/logo.png`,
+        url: `${siteConfig.url}/og-image.png`,
       },
     },
     mainEntityOfPage: {

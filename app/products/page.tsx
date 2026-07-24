@@ -4,32 +4,39 @@ import { siteConfig } from "@/lib/site-config";
 
 /* ── Metadata ── */
 export const metadata: Metadata = {
-  title: "Products — Performance Engine Coolant Concentrate",
+  title: "Race 3 Plus Engine Coolant | Performance Coolant Concentrate",
   description:
-    "Race3+ Performance Engine Coolant Concentrate — a high-performance engine coolant designed to maximize cooling efficiency, prevent overheating, and protect against corrosion. Coming soon.",
+    "Race 3 Plus Performance Engine Coolant Concentrate — a high-performance automotive coolant engineered to maximize cooling efficiency, prevent overheating, and protect against corrosion. Race 3 Plus car coolant is available for bikes, SUVs, and commercial vehicles. Coming soon.",
   keywords: [
+    "Race 3 Plus",
+    "Race 3 Plus Coolant",
+    "Race 3 Plus engine coolant",
+    "automotive coolant",
     "engine coolant",
+    "car coolant",
     "performance coolant concentrate",
     "engine coolant concentrate",
     "radiator coolant",
     "anti-corrosion coolant",
-    "Race3+ coolant",
     "MEG coolant",
     "engine protection fluid",
   ],
+  alternates: {
+    canonical: "https://race3plus.com/products",
+  },
   openGraph: {
-    title: "Race3+ Performance Engine Coolant Concentrate — Coming Soon",
+    title: "Race 3 Plus Performance Engine Coolant Concentrate — Coming Soon",
     description:
-      "High-performance engine coolant concentrate with 1:4 dilution formula. Advanced anti-corrosion additives for cars, bikes, SUVs & commercial vehicles.",
+      "Race 3 Plus high-performance engine coolant concentrate with 1:4 dilution formula. Advanced anti-corrosion additives for cars, bikes, SUVs & commercial vehicles.",
     url: `${siteConfig.url}/products`,
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+ Performance Engine Coolant" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Race 3 Plus Performance Engine Coolant" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Race3+ Performance Engine Coolant Concentrate — Coming Soon",
+    title: "Race 3 Plus Performance Engine Coolant Concentrate — Coming Soon",
     description:
-      "High-performance 1:4 concentrate coolant. Engineered to protect your engine against heat, wear, and corrosion.",
-    images: ["/logo.png"],
+      "Race 3 Plus high-performance 1:4 concentrate coolant. Engineered to protect your engine against heat, wear, and corrosion.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -37,22 +44,24 @@ export const metadata: Metadata = {
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Race3+ Performance Engine Coolant Concentrate",
+  name: "Race 3 Plus Performance Engine Coolant Concentrate",
   description:
-    "Race3+ is a high-performance engine coolant concentrate designed to maximize cooling efficiency and protect your engine under demanding conditions. Its 1:4 dilution formula uses a low MEG formulation combined with advanced anti-corrosion additives to promote efficient heat transfer while helping protect critical cooling system components.",
+    "Race 3 Plus is a high-performance engine coolant concentrate designed to maximize cooling efficiency and protect your engine under demanding conditions. Its 1:4 dilution formula uses a low MEG formulation combined with advanced anti-corrosion additives to promote efficient heat transfer while helping protect critical cooling system components.",
   brand: {
     "@type": "Brand",
-    name: "Race3+",
+    name: "Race 3 Plus",
   },
   url: `${siteConfig.url}/products`,
-  image: `${siteConfig.url}/logo.png`,
+  image: `${siteConfig.url}/og-image.png`,
+  dateModified: "2025-07-18",
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/PreOrder",
     url: siteConfig.whatsappLaunchMsg,
+    priceCurrency: "INR",
     seller: {
       "@type": "Organization",
-      name: "Race3+",
+      name: "Race 3 Plus",
     },
   },
 };

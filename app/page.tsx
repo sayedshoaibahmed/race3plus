@@ -5,40 +5,55 @@ import { siteConfig } from "@/lib/site-config";
 
 /* ── Metadata ── */
 export const metadata: Metadata = {
-  title: "Keep Performance Alive",
+  title: "Race 3 Plus — Keep Performance Alive",
   description:
-    "Race3+ delivers premium automotive engine protection — coolants, additives, and performance solutions engineered to keep your engine running cooler, longer, and stronger.",
+    "Race 3 Plus delivers premium automotive engine protection — high-performance coolants, additives, and engine protection solutions engineered to keep your engine running cooler, longer, and stronger.",
+  alternates: {
+    canonical: "https://race3plus.com",
+  },
   openGraph: {
-    title: "Race3+ — Keep Performance Alive",
+    title: "Race 3 Plus — Keep Performance Alive",
     description:
-      "Premium automotive engine protection solutions. Engine coolants and additives engineered for cars, bikes, SUVs, and commercial vehicles.",
+      "Race 3 Plus — premium automotive engine coolant and protection products. Engineered for cars, bikes, SUVs, and commercial vehicles.",
     url: siteConfig.url,
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Race3+" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Race 3 Plus — Keep Performance Alive" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Race3+ — Keep Performance Alive",
-    description: "Premium automotive engine protection solutions.",
-    images: ["/logo.png"],
+    title: "Race 3 Plus — Keep Performance Alive",
+    description: "Race 3 Plus — premium automotive engine coolant and protection products.",
+    images: ["/og-image.png"],
   },
 };
 
-/* ── JSON-LD Schema ── */
+/* ── JSON-LD Schemas ── */
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Race3+",
+  name: "Race 3 Plus",
+  alternateName: "Race3+",
   url: siteConfig.url,
-  logo: `${siteConfig.url}/logo.png`,
+  logo: `${siteConfig.url}/og-image.png`,
   sameAs: [siteConfig.instagram],
   contactPoint: [
     {
       "@type": "ContactPoint",
       telephone: siteConfig.phone,
       contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: "English",
     },
   ],
   email: siteConfig.email,
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Race 3 Plus",
+  url: siteConfig.url,
+  description:
+    "Race 3 Plus delivers premium automotive engine coolant and protection products engineered for cars, bikes, SUVs, and commercial vehicles across India.",
 };
 
 /* ─────────────────────────────────────────────
@@ -163,10 +178,15 @@ const benefits = [
 export default function HomePage() {
   return (
     <>
-      {/* JSON-LD */}
+      {/* JSON-LD — Organization */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      {/* JSON-LD — WebSite */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       {/* ── 1. HERO ─────────────────────────────── */}
@@ -205,7 +225,7 @@ export default function HomePage() {
           </div>
 
           {/* Logo / Wordmark */}
-          <h1 className="sr-only">Race 3 Plus</h1>
+          <h1 className="sr-only">Race 3 Plus — Keep Performance Alive</h1>
           <div className="animate-fade-up delay-100">
             <Image
               src="/logo.webp"
